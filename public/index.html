@@ -86,10 +86,12 @@ img{max-width:100%;display:block}
 .runtime p{color:var(--ink-2);max-width:50ch}
 .runtime p+p{margin-top:1rem}
 .runtime p strong{color:var(--ink)}
-.runtime .stats{margin-top:1.6rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.runtime .stat{background:var(--bg-2);padding:.85rem 1rem}
-.runtime .stat b{display:block;font-family:var(--mono);font-size:1.25rem;font-weight:600;color:var(--green)}
-.runtime .stat span{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.term{margin-top:1.6rem;border:1px solid var(--line-2);background:#070a10}
+.term .bar{display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--line);padding:.45rem .8rem;background:var(--panel)}
+.term .bar i{width:.5rem;height:.5rem;border-radius:50%;background:var(--line-2)}
+.term pre{padding:.85rem 1rem;font-family:var(--mono);font-size:.76rem;line-height:1.85;color:var(--ink-2);overflow-x:auto}
+.term pre b{color:var(--green);font-weight:600}
+.term pre .dim{color:var(--muted)}
 .runtime .cta{display:inline-block;margin-top:1.6rem;align-self:start;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
   background:var(--cyan);color:#06282e;padding:.7rem 1.2rem;font-weight:600}
 .runtime .cta:hover{filter:brightness(1.1)}
@@ -197,10 +199,12 @@ img{max-width:100%;display:block}
           <strong>without editing a component</strong>.</p>
         <p>Every frame is one transaction over the input tape. Same tape in, same trajectory out,
           <strong>byte for byte</strong>, which is why every engine in this lab can be tested like a pure function.</p>
-        <div class="stats">
-          <div class="stat"><b>60 fps</b><span>on 333 MHz / 32 MB</span></div>
-          <div class="stat"><b>3</b><span>frameworks, one core</span></div>
-          <div class="stat"><b>2 B</b><span>per frame to replay</span></div>
+        <div class="term">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <pre><span class="dim">$</span> pocket check --target psp
+<b>ok</b> <span class="dim">480x272 · text.glyphs.baked · input.buttons</span>
+<span class="dim">$</span> pocket check --target vita
+<b>ok</b> <span class="dim">same bundle, density 2, no component edited</span></pre>
         </div>
         <a class="cta" href="https://pocketjs.dev">Enter pocketjs.dev →</a>
       </div>
