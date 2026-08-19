@@ -1,0 +1,21 @@
+{
+  // Pocket Lab site — an assets-only Worker (Workers Static Assets, no server
+  // script). Serves ./public. Deploy from the repo root:
+  //   bun run deploy
+  "name": "pocketlab",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    // unknown paths -> the branded /404.html
+    "not_found_handling": "404-page"
+  },
+  // Custom domains (apex + www). Requires the pocketlab.build zone to be
+  // active in the Cloudflare account; wrangler provisions the custom domain
+  // and edge certificate on deploy.
+  "routes": [
+    { "pattern": "pocketlab.build", "custom_domain": true },
+    { "pattern": "www.pocketlab.build", "custom_domain": true }
+  ]
+}

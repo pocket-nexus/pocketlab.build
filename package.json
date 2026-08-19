@@ -1,0 +1,11 @@
+{
+  "name": "pocketlab.build",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
+  }
+}
