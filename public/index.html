@@ -126,18 +126,6 @@ img{max-width:100%;display:block}
 .strip .shot{aspect-ratio:16/9}
 .strip .shot img{position:absolute;inset:0}
 
-/* museum */
-.mus-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}
-.mus{border:1px solid var(--line-2);background:var(--bg-2);padding:1rem 1.1rem;position:relative}
-.mus .yr{font-family:var(--mono);font-size:.68rem;color:var(--amber);letter-spacing:.08em}
-.mus h4{font-weight:600;font-size:1rem;margin:.35rem 0 .25rem}
-.mus p{font-size:.8rem;color:var(--muted);line-height:1.5}
-.mus .spec{margin-top:.7rem;font-family:var(--mono);font-size:.64rem;color:var(--ink-2);border-top:1px dashed var(--line-2);padding-top:.55rem}
-.mus-note{margin-top:1.1rem;font-family:var(--mono);font-size:.74rem;color:var(--muted)}
-.mus-note a{color:var(--cyan)}
-.mus-intro{max-width:62ch;color:var(--ink-2);margin-bottom:1.8rem}
-.mus-intro strong{color:var(--ink)}
-
 /* footer */
 .foot{padding:2.4rem 0 3.2rem}
 .foot .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:baseline}
@@ -150,7 +138,7 @@ img{max-width:100%;display:block}
   .prow.hdr{display:none}
   .prow .id{grid-area:id}.prow .nm{grid-area:nm}.prow .ds{grid-area:ds}.prow .dom{grid-area:dom}.prow .st{grid-area:st;justify-content:flex-end}.prow .story{grid-area:story;text-align:right}
   .runtime{grid-template-columns:1fr}
-  .strip,.mus-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 </style>
 </head>
@@ -164,7 +152,7 @@ img{max-width:100%;display:block}
     <nav class="nav-links">
       <a href="#runtime">Runtime</a>
       <a href="#index">Index</a>
-      <a href="#museum">Museum</a>
+      <a href="https://museum.pocketlab.build">Museum ↗</a>
       <a href="https://pocketjs.dev/blog/">Notebook</a>
       <a href="https://github.com/pocket-stack">GitHub</a>
     </nav>
@@ -291,28 +279,6 @@ img{max-width:100%;display:block}
       <div class="shot"><img src="/assets/vapor-gba-edit.png" alt="Vue todo on GBA"><span class="tag">PL-03 · vue on gba, 9.1 KB</span></div>
       <div class="shot"><img src="/assets/pocket-pi-esp32-hero.png" alt="Pocket Pi screens on ESP32-P4"><span class="tag">PL-06 · agent in 304 KB</span></div>
     </div>
-  </div>
-</section>
-
-<section class="sect" id="museum">
-  <div class="wrap">
-    <div class="sect-head">
-      <span class="idx">02</span><h2>The Pocket Museum</h2><span class="fill"></span><span class="mlabel">Permanent collection</span>
-    </div>
-    <p class="mus-intro">New software for machines the industry finished with. Every exhibit runs
-      <strong>today's Pocket stack on the original hardware</strong>, as a live guest or a compiled cartridge,
-      and every port ships with an engineering story. The museum is how the runtime keeps its portability honest.</p>
-    <div class="mus-grid">
-      <div class="mus"><span class="yr">1983 / 1989 / 2001</span><h4>NES · Game Boy · GBA</h4><p>Vue compiled to cartridges. Reactive JS in 2 KB of RAM.</p><div class="spec">6502 · SM83 · ARM7</div></div>
-      <div class="mus"><span class="yr">2004</span><h4>Sony PSP</h4><p>The founding machine. Games, YouTube, Figma, DevTools at 60 fps.</p><div class="spec">MIPS 333 MHz · 32 MB</div></div>
-      <div class="mus"><span class="yr">2007</span><h4>iPhone (original)</h4><p>A UIKit host with no Objective-C. Zero shaders on the MBX Lite.</p><div class="spec">ARMv6 · GL ES 1.1</div></div>
-      <div class="mus"><span class="yr">2009</span><h4>Meizu M8</h4><p>From message pump to multitouch on Windows CE.</p><div class="spec">480×720 BGRA over GDI</div></div>
-      <div class="mus"><span class="yr">2011</span><h4>Nokia E7</h4><p>Cover-flow launcher and a 3D FPS on Symbian Belle.</p><div class="spec">GLES2 · SIS install</div></div>
-      <div class="mus"><span class="yr">2011</span><h4>PS Vita</h4><p>Twice the pixels, zero forks. Same bundles, byte-exact goldens.</p><div class="spec">960×544 · density 2</div></div>
-      <div class="mus"><span class="yr">e-ink</span><h4>PocketBook</h4><p>Animated partial refresh on a screen that loves stillness.</p><div class="spec">hostAbi 5 · takeover</div></div>
-      <div class="mus"><span class="yr">2022</span><h4>Playdate</h4><p>The crank as a first-class hardware-neutral axis.</p><div class="spec">Cortex-M7 · RelativeAxis</div></div>
-    </div>
-    <p class="mus-note">Acquisition reports are public: <a href="https://pocketjs.dev/blog/">pocketjs.dev/blog ↗</a></p>
   </div>
 </section>
 
