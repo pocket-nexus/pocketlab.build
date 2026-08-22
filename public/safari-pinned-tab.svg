@@ -1,0 +1,8 @@
+<!-- Safari pinned tab / favourites mask. Safari uses the alpha channel only and
+     paints it in the colour the mask-icon link declares, so this is the same
+     mark as favicon.svg with the two accent colours flattened to solid black. -->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 4.25H3.75v7.5H6" fill="none" stroke="#000" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 4.25h2.25v7.5H10" fill="none" stroke="#000" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="7" y="7" width="2" height="2" fill="#000"/>
+</svg>
