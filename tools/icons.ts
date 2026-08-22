@@ -9,6 +9,8 @@
 //   favicon.ico            16 + 32 + 48, PNG payloads in one container
 //   favicon-96.png         crawlers and older Android that want a raster
 //   apple-touch-icon.png   180, iOS home screen and Safari favourites
+//   apple-touch-icon-*.png 120/152/167, so iOS never has to rescale
+//   ...-precomposed.png    what older iOS fetches from the root with no link
 //   icon-192/512.png       web app manifest
 //   icon-512-maskable.png  Android adaptive icons, artwork inside the safe zone
 //
@@ -33,6 +35,10 @@ type Job = { file: string; size: number; bleed: boolean };
 const PNGS: Job[] = [
   { file: "favicon-96.png", size: 96, bleed: false },
   { file: "apple-touch-icon.png", size: 180, bleed: true },
+  { file: "apple-touch-icon-precomposed.png", size: 180, bleed: true },
+  { file: "apple-touch-icon-167.png", size: 167, bleed: true },
+  { file: "apple-touch-icon-152.png", size: 152, bleed: true },
+  { file: "apple-touch-icon-120.png", size: 120, bleed: true },
   { file: "icon-192.png", size: 192, bleed: false },
   { file: "icon-512.png", size: 512, bleed: false },
   { file: "icon-512-maskable.png", size: 512, bleed: true },
