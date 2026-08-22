@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
+    "icons": "bun tools/icons.ts",
     "preview": "wrangler dev"
   },
   "devDependencies": {

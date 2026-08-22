@@ -12,6 +12,12 @@ The Pocket Lab umbrella site: one static landing page that indexes the runtime
 - Project cards link to stories on [pocketjs.dev](https://pocketjs.dev). The
   navigation links to the live [Pocket Museum](https://museum.pocketlab.build);
   the remaining `*.pocketlab.build` subdomains listed in the index are reserved.
+- `public/favicon.svg` is the only icon drawing. `bun tools/icons.ts` rasterizes
+  it with headless Chrome into the rest of the family (`favicon.ico`,
+  `favicon-96.png`, `apple-touch-icon.png`, `icon-192/512.png`, and a maskable
+  512 for Android). `public/safari-pinned-tab.svg` is the hand-flattened
+  monochrome version Safari masks for pinned tabs, and `public/site.webmanifest`
+  ties the raster set together. Re-run the script after editing the drawing.
 
 ## Deploy
 
